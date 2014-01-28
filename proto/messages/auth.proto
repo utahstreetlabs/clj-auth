@@ -1,0 +1,12 @@
+option java_package = "com.copious.auth";
+
+message Identity {
+  required int32 user_id = 1;
+  required string token = 2;
+  optional string secret = 7;
+  optional int32 token_expires_at = 4;
+  optional string scope = 3;
+  optional string tmp_token = 5;
+  optional int32 tmp_token_expires_at = 6;
+  optional string code = 8; /* FB code from client-side auth */
+}
